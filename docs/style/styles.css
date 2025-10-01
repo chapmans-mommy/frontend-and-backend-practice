@@ -6,6 +6,37 @@ html,body {
     height: 100%;
 }
 
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #f8f9fa;
+    color: #212529;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    line-height: 1.5;
+}
+
+.btn:hover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+    transform: translateY(-1px);
+}
+
+.btn:active {
+    transform: translateY(0);
+}
+
+.btn:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
+}
+
 .page-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -20,9 +51,22 @@ html,body {
     background-color: white ;
     padding: 40px;
     max-width: 100%;
-    margin: 0 auto;
+    text-align: center;
     flex: 1;
     min-height: 100%;
+}
+
+.content-prod {
+    background-color: white ;
+    padding: 40px;
+    max-width: 100%;
+    text-align: center;
+    flex: 1;
+    min-height: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    align-items: start;
 }
 
 .header {
