@@ -8,8 +8,8 @@
 </head>
 <div>
     <div class="page-container">
-        <div class="header">Товары</div>  
-        <div class="nav">
+        <header class="header">Товары</header>  
+        <nav class="nav">
             <ul class="nav-list">
                 <li class="nav-item"><a class="nav-link" href="../index.html">Главная</a></li>
                 <li class="nav-item"><a class="nav-link" href="news.html">Новости</a></li>
@@ -17,30 +17,53 @@
                 <li class="nav-item"><a class="nav-link" href="goods.html">Товары</a></li>
                 <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
             </ul>
-        </div>
-        <div class = "content-prod">       
-            <div class="experience-card">
-                <img class="profile-photo" src="images/kitten1.jpg" alt="Товар 1" width="200" height="200">
-                <h1 class="profile-title">Котёнок бенгал</h1>
-                <p class="profile-group">Цена: 50 000 руб.</p>
-                <p class = "profile-group">Бенгальский котенок - воплощение дикой красоты в вашем доме!</p>
-            </div>
-                
-            <div class="experience-card">
-                <img class="profile-photo" src="images/kitten2.jpg" alt="Товар 2" width="200" height="200">
-                <h1 class="profile-title">Котёнок шотландец</h1>
-                <p class="profile-group">Цена: 26 999 руб.</p>
-                <p class = "profile-group">Шотландский вислоухий котенок — очарование в складку!</p>
-            </div>
-                
-            <div class="experience-card">
-                <img class="profile-photo" src="images/kitten3.jpg" alt="Товар 3" width="200" height="200">
-                <h1 class="profile-title">Котёнок мейн-кун</h1>
-                <p class="profile-group">Цена: 43 500 руб.</p>
-                <p class = "profile-group"> Мейн-кун — королевский великан с сердцем золота!</p>
-            </div>  
-        </div>    
-        <div class="footer">All rights are protected</div>
+        </nav>
+        <main class = "content"> 
+            <section class="products-section"> 
+                    <h2 class="section-title">Каталог товаров</h2>
+                    <p class="section-description">Мы предлагаем различные породы котят, но все - милашки</p>
+
+                    <div class="products-grid">
+
+                        <article class="product-card">
+                            <div class="product-image-container">
+                                <img class="product-image" src="images/kitten1.jpg" alt="Котенок бенгальский вислоухий"></img>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Котёнок бенгал</h3>
+                                <p class="product-description">Бенгальский котенок - воплощение дикой красоты в вашем доме!</p>
+                                <p class="product-price">50 000 ₽ </p>
+                                <button class="product-button">В корзину</button>
+                            </div>
+                        </article>
+
+                        <article class="product-card">
+                            <div class="product-image-container">
+                                <img class="product-image" src="images/kitten2.jpg" alt="Котенок Шотландский вислоухий"></img>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Котёнок шотландец</h3>
+                                <p class="product-description">Шотландский вислоухий котенок — очарование в складку!</p>
+                                <p class="product-price">26 999 ₽ </p>
+                                <button class="product-button">В корзину</button>
+                            </div>
+                        </article>
+                        
+                        <article class="product-card">
+                            <div class="product-image-container">
+                                <img class="product-image" src="images/kitten3.jpg" alt="Котенок Мейн-кун"></img>
+                            </div>
+                            <div class="product-info">
+                                <h3 class="product-name">Котёнок мейн-кун</h3>
+                                <p class="product-description">Мейн-кун — королевский великан с сердцем золота!</p>
+                                <p class="product-price">43 500 ₽ </p>
+                                <button class="product-button">В корзину</button>
+                            </div>
+                        </article> 
+                    </div>
+            </section> 
+        </main>    
+        <footer class="footer">All rights are protected</footer>
     </div>
 </body>
 </html>
