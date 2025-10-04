@@ -6,37 +6,6 @@ html,body {
     height: 100%;
 }
 
-.btn {
-    display: inline-block;
-    padding: 12px 24px;
-    background-color: #f8f9fa;
-    color: #212529;
-    border: 1px solid #dee2e6;
-    border-radius: 6px;
-    font-size: 14px;
-    font-weight: 400;
-    text-decoration: none;
-    text-align: center;
-    cursor: pointer;
-    transition: all 0.2s ease-in-out;
-    line-height: 1.5;
-}
-
-.btn:hover {
-    background-color: #e9ecef;
-    border-color: #adb5bd;
-    transform: translateY(-1px);
-}
-
-.btn:active {
-    transform: translateY(0);
-}
-
-.btn:focus {
-    outline: none;
-    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.1);
-}
-
 .page-container {
     max-width: 1200px;
     margin: 0 auto;
