@@ -1,66 +1,116 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Семестровая работа</title>
+    <title>LittleKitten - Портфолио</title>
     <link rel="stylesheet" href="style/styles.css">
 </head>
 
 <body>
-    <div class="page-container">
-        <header class="header"><h1>LittleKitten</h1></header>
+    <div class="page">
+        <header class="header">
+            <h1 class="header__title">LittleKitten</h1>
+            <button class="theme-switcher" aria-label="Переключить тему">
+                🌙
+            </button>
+        </header>
+        
         <nav class="nav">
-            <ul class="nav-list">
-                <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/news.html">Новости</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/practices.html">Практики</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/goods.html">Товары</a></li>
-                <li class="nav-item"><a class="nav-link" href="pages/contacts.html">Контакты</a></li>
+            <ul class="nav__list">
+                <li class="nav__item nav__item--active">
+                    <a class="nav__link" href="index.html">Главная</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="pages/news.html">Новости</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="pages/practices.html">Практики</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="pages/goods.html">Товары</a>
+                </li>
+                <li class="nav__item">
+                    <a class="nav__link" href="pages/contacts.html">Контакты</a>
+                </li>
             </ul>
         </nav>
-        <main class="content">
-            <article class="profile-header">
-                <h1 class="profile-title">Информация об авторе</h1>
-                <img class="profile-photo" src="pages/images/mypic.jpg" alt="Фото автора">
-                <h2 class="profile-name">Иванова Валерия Денисовна</h2>
-                <p class="profile-group">ЭФБО-02-24</p>
+        
+        <main class="main">
+            <article class="profile">
+                <h1 class="profile__title">Информация об авторе</h1>
+                <img class="profile__photo" src="pages/images/mypic.jpg" alt="Фото автора">
+                <h2 class="profile__name">Иванова Валерия Денисовна</h2>
+                <p class="profile__group">ЭФБО-02-24</p>
             </article>
 
-            <section class="about-me">
-                <h2>Обо мне</h2>
-                <p class="experience-desc" style = "text-align:left" >Обо мне: Я родилась в городе Ковров Владимирской области в 2006-м на краю города. С детства любила животных. Закончила 11 классов с медалькой, потратила все нервы на ЕГЭ и теперь здорово сижу на парах и хихикаю с друзьями.</p>
+            <section class="about">
+                <h2 class="about__title">Обо мне</h2>
+                <p class="about__text">
+                    Я родилась в городе Ковров Владимирской области в 2006-м на краю города. 
+                    С детства любила животных. Закончила 11 классов с медалькой, потратила все 
+                    нервы на ЕГЭ и теперь здорово сижу на парах и хихикаю с друзьями.
+                </p>
             </section>
             
-            <section class="skills-container">
-                <h2>Мои навыки</h2>
-                <div class="skills-grid">
-                    <div class="skill-tag">Python</div>
-                    <div class="skill-tag">C++</div>
-                    <div class="skill-tag">HTML</div>
-                    <div class="skill-tag">CSS</div>
+            <section class="skills">
+                <h2 class="skills__title">Мои навыки</h2>
+                <div class="skills__grid">
+                    <div class="skill">Python</div>
+                    <div class="skill">C++</div>
+                    <div class="skill">HTML</div>
+                    <div class="skill">CSS</div>
                 </div>
             </section>
             
-            <section class="experience-section">
-                <h2 class="section-title">Мой опыт работы</h2>
-                <div class="experience-grid">
-                    <article class="experience-card">
-                        <h3 class="experience-title">Музыка</h3>
-                        <p class="experience-desc">Работала уличным музыкантом. Сочиняла, играла и пела.</p>
+            <section class="experience">
+                <h2 class="experience__title">Мой опыт работы</h2>
+                <div class="experience__grid">
+                    <article class="card">
+                        <h3 class="card__title">Музыка</h3>
+                        <p class="card__desc">Работала уличным музыкантом. Сочиняла, играла и пела.</p>
                     </article>
-                    <article class="experience-card">
-                        <h3 class="experience-title">Животные</h3>
-                        <p class="experience-desc">Работала сиделкой для котят. Мило и больно (коготки то острые).</p>
+                    <article class="card">
+                        <h3 class="card__title">Животные</h3>
+                        <p class="card__desc">Работала сиделкой для котят. Мило и больно (коготки то острые).</p>
                     </article>
-                    <article class="experience-card">
-                        <h3 class="experience-title">Бармен</h3>
-                        <p class="experience-desc">Работала официантом-барменом. Никогда не работайте с людьми.</p>
+                    <article class="card">
+                        <h3 class="card__title">Бармен</h3>
+                        <p class="card__desc">Работала официантом-барменом. Никогда не работайте с людьми.</p>
                     </article>
                 </div>
             </section>
         </main>
-        <footer class="footer"><p>All rights are protected</p></footer>
+        <footer class="footer"><p class="footer__text">All rights are protected</p></footer>
     </div>
+
+    <script>
+        const themeSwitcher = document.querySelector('.theme-switcher');
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        updateThemeButton(currentTheme);
+        
+        themeSwitcher.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeButton(newTheme);
+        });
+        
+        function updateThemeButton(theme) {
+            themeSwitcher.textContent = theme === 'light' ? '🌙' : '☀️';
+        }
+        
+        document.addEventListener('DOMContentLoaded', () => {
+            const animatedElements = document.querySelectorAll('.profile, .about, .skills, .experience');
+            animatedElements.forEach((el, index) => {
+                el.style.animationDelay = `${index * 0.2}s`;
+                el.classList.add('fade-in');
+            });
+        });
+    </script>
 </body>
 </html>
