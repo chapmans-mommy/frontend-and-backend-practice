@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="ru" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Товары - LittleKitten</title>
+    <link rel="stylesheet" href="../style/styles.css">
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <h1 class="header__title">Товары</h1>
+            <button class="theme-switcher" aria-label="Переключить тему">🌙</button>
+        </header>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a class="nav__link" href="../index.html">Главная</a></li>
+                <li class="nav__item"><a class="nav__link" href="news.html">Новости</a></li>
+                <li class="nav__item"><a class="nav__link" href="practices.html">Практики</a></li>
+                <li class="nav__item nav__item--active"><a class="nav__link" href="goods.html">Товары</a></li>
+                <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
+            </ul>
+        </nav>
+        <main class="main"> 
+            <section class="products"> 
+                <h2 class="products__title">Каталог товаров</h2>
+                <p class="products__desc">Мы предлагаем различные породы котят, но все - милашки</p>
+
+                <div class="products__grid">
+                    <article class="card card--product">
+                        <div class="card__image-container">
+                            <img class="card__image" src="images/kitten1.jpg" alt="Котенок бенгальский вислоухий">
+                        </div>
+                        <div class="card__content">
+                            <h3 class="card__title">Котёнок бенгал</h3>
+                            <p class="card__desc">Бенгальский котенок - воплощение дикой красоты в вашем доме!</p>
+                            <p class="card__price">50 000 ₽</p>
+                            <button class="button button--full">В корзину</button>
+                        </div>
+                    </article>
+
+                    <article class="card card--product">
+                        <div class="card__image-container">
+                            <img class="card__image" src="images/kitten2.jpg" alt="Котенок Шотландский вислоухий">
+                        </div>
+                        <div class="card__content">
+                            <h3 class="card__title">Котёнок шотландец</h3>
+                            <p class="card__desc">Шотландский вислоухий котенок — очарование в складку!</p>
+                            <p class="card__price">26 999 ₽</p>
+                            <button class="button button--full">В корзину</button>
+                        </div>
+                    </article>
+                    
+                    <article class="card card--product">
+                        <div class="card__image-container">
+                            <img class="card__image" src="images/kitten3.jpg" alt="Котенок Мейн-кун">
+                        </div>
+                        <div class="card__content">
+                            <h3 class="card__title">Котёнок мейн-кун</h3>
+                            <p class="card__desc">Мейн-кун — королевский великан с сердцем золота!</p>
+                            <p class="card__price">43 500 ₽</p>
+                            <button class="button button--full">В корзину</button>
+                        </div>
+                    </article> 
+                </div>
+            </section> 
+        </main>    
+        <footer class="footer">
+            <p class="footer__text">All rights are protected</p>
+        </footer>
+    </div>
+
+    <script>
+        const themeSwitcher = document.querySelector('.theme-switcher');
+        const currentTheme = localStorage.getItem('theme') || 'light';
+        
+        document.documentElement.setAttribute('data-theme', currentTheme);
+        updateThemeButton(currentTheme);
+        
+        themeSwitcher.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            const newTheme = currentTheme === 'light' ? 'dark' : 'light';
+            
+            document.documentElement.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeButton(newTheme);
+        });
+        
+        function updateThemeButton(theme) {
+            themeSwitcher.textContent = theme === 'light' ? '🌙' : '☀️';
+        }
+    </script>
+</body>
+</html>

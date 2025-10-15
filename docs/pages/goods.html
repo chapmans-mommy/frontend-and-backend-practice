@@ -4,91 +4,362 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Товары - LittleKitten</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../style/styles.css">
 </head>
-<body>
-    <div class="page">
-        <header class="header">
-            <h1 class="header__title">Товары</h1>
-            <button class="theme-switcher" aria-label="Переключить тему">🌙</button>
-        </header>
-        <nav class="nav">
-            <ul class="nav__list">
-                <li class="nav__item"><a class="nav__link" href="../index.html">Главная</a></li>
-                <li class="nav__item"><a class="nav__link" href="news.html">Новости</a></li>
-                <li class="nav__item"><a class="nav__link" href="practices.html">Практики</a></li>
-                <li class="nav__item nav__item--active"><a class="nav__link" href="goods.html">Товары</a></li>
-                <li class="nav__item"><a class="nav__link" href="contacts.html">Контакты</a></li>
-            </ul>
-        </nav>
-        <main class="main"> 
-            <section class="products"> 
-                <h2 class="products__title">Каталог товаров</h2>
-                <p class="products__desc">Мы предлагаем различные породы котят, но все - милашки</p>
-
-                <div class="products__grid">
-                    <article class="card card--product">
-                        <div class="card__image-container">
-                            <img class="card__image" src="images/kitten1.jpg" alt="Котенок бенгальский вислоухий">
-                        </div>
-                        <div class="card__content">
-                            <h3 class="card__title">Котёнок бенгал</h3>
-                            <p class="card__desc">Бенгальский котенок - воплощение дикой красоты в вашем доме!</p>
-                            <p class="card__price">50 000 ₽</p>
-                            <button class="button button--full">В корзину</button>
-                        </div>
-                    </article>
-
-                    <article class="card card--product">
-                        <div class="card__image-container">
-                            <img class="card__image" src="images/kitten2.jpg" alt="Котенок Шотландский вислоухий">
-                        </div>
-                        <div class="card__content">
-                            <h3 class="card__title">Котёнок шотландец</h3>
-                            <p class="card__desc">Шотландский вислоухий котенок — очарование в складку!</p>
-                            <p class="card__price">26 999 ₽</p>
-                            <button class="button button--full">В корзину</button>
-                        </div>
-                    </article>
-                    
-                    <article class="card card--product">
-                        <div class="card__image-container">
-                            <img class="card__image" src="images/kitten3.jpg" alt="Котенок Мейн-кун">
-                        </div>
-                        <div class="card__content">
-                            <h3 class="card__title">Котёнок мейн-кун</h3>
-                            <p class="card__desc">Мейн-кун — королевский великан с сердцем золота!</p>
-                            <p class="card__price">43 500 ₽</p>
-                            <button class="button button--full">В корзину</button>
-                        </div>
-                    </article> 
+<body class="bg-light" data-bs-theme="light">
+    <div class="container-fluid p-0">
+        <!-- Header -->
+        <header class="bg-primary text-white py-4">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col">
+                        <h1 class="h3 mb-1">LittleKitten</h1>
+                        <p class="mb-0 opacity-75">Магазин котят</p>
+                    </div>
+                    <div class="col-auto">
+                        <span class="badge bg-light text-primary">Товары</span>
+                        <button class="btn btn-outline-light btn-sm ms-2" id="themeToggle">
+                            <i class="bi bi-moon-stars"></i>
+                        </button>
+                    </div>
                 </div>
-            </section> 
-        </main>    
-        <footer class="footer">
-            <p class="footer__text">All rights are protected</p>
+            </div>
+        </header>
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="../index.html">
+                                <i class="bi bi-house me-1"></i>Главная
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="news.html">
+                                <i class="bi bi-newspaper me-1"></i>Новости
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="practices.html">
+                                <i class="bi bi-code-slash me-1"></i>Практики
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="goods.html">
+                                <i class="bi bi-cart me-1"></i>Товары
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacts.html">
+                                <i class="bi bi-telephone me-1"></i>Контакты
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="container my-4">
+            <!-- Page Header -->
+            <section class="mb-5 text-center">
+                <h2 class="h1 text-primary mb-3">Каталог товаров</h2>
+                <p class="lead text-muted">Мы предлагаем различные породы котят, но все - милашки</p>
+            </section>
+
+            <!-- Products Grid -->
+            <section class="mb-5">
+                <div class="row g-4">
+                    <!-- Product 1 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm border-0 product-card">
+                            <div class="position-relative">
+                                <img src="images/kitten1.jpg" class="card-img-top" alt="Котенок бенгальский вислоухий" style="height: 250px; object-fit: cover;">
+                                <span class="position-absolute top-0 end-0 m-2 badge bg-success">В наличии</span>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-primary product-title">Котёнок бенгал</h5>
+                                <p class="card-text text-muted product-desc flex-grow-1">
+                                    Бенгальский котенок - воплощение дикой красоты в вашем доме!
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="h4 text-danger mb-0 product-price">50 000 ₽</span>
+                                    <span class="badge bg-primary">Премиум</span>
+                                </div>
+                                <button class="btn btn-primary btn-lg w-100 product-btn">
+                                    <i class="bi bi-cart-plus me-2"></i>В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 2 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm border-0 product-card">
+                            <div class="position-relative">
+                                <img src="images/kitten2.jpg" class="card-img-top" alt="Котенок Шотландский вислоухий" style="height: 250px; object-fit: cover;">
+                                <span class="position-absolute top-0 end-0 m-2 badge bg-success">В наличии</span>
+                                <span class="position-absolute top-0 start-0 m-2 badge bg-warning text-dark">Популярный</span>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-primary product-title">Котёнок шотландец</h5>
+                                <p class="card-text text-muted product-desc flex-grow-1">
+                                    Шотландский вислоухий котенок — очарование в складку!
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="h4 text-danger mb-0 product-price">26 999 ₽</span>
+                                    <span class="badge bg-success">Стандарт</span>
+                                </div>
+                                <button class="btn btn-primary btn-lg w-100 product-btn">
+                                    <i class="bi bi-cart-plus me-2"></i>В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Product 3 -->
+                    <div class="col-lg-4 col-md-6">
+                        <div class="card h-100 shadow-sm border-0 product-card">
+                            <div class="position-relative">
+                                <img src="images/kitten3.jpg" class="card-img-top" alt="Котенок Мейн-кун" style="height: 250px; object-fit: cover;">
+                                <span class="position-absolute top-0 end-0 m-2 badge bg-success">В наличии</span>
+                                <span class="position-absolute top-0 start-0 m-2 badge bg-info">Новинка</span>
+                            </div>
+                            <div class="card-body d-flex flex-column">
+                                <h5 class="card-title text-primary product-title">Котёнок мейн-кун</h5>
+                                <p class="card-text text-muted product-desc flex-grow-1">
+                                    Мейн-кун — королевский великан с сердцем золота!
+                                </p>
+                                <div class="d-flex justify-content-between align-items-center mb-3">
+                                    <span class="h4 text-danger mb-0 product-price">43 500 ₽</span>
+                                    <span class="badge bg-warning">Премиум</span>
+                                </div>
+                                <button class="btn btn-primary btn-lg w-100 product-btn">
+                                    <i class="bi bi-cart-plus me-2"></i>В корзину
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="bg-dark text-white py-4 mt-5">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p class="mb-0">All rights are protected</p>
+                    </div>
+                    <div class="col-md-6 text-md-end">
+                        <a href="contacts.html" class="text-white text-decoration-none me-3">Контакты</a>
+                        <a href="#" class="text-white text-decoration-none">Доставка и оплата</a>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        const themeSwitcher = document.querySelector('.theme-switcher');
+        // Управление темной темой
+        const themeToggle = document.getElementById('themeToggle');
         const currentTheme = localStorage.getItem('theme') || 'light';
         
+        // Применяем сохраненную тему
         document.documentElement.setAttribute('data-theme', currentTheme);
+        document.body.setAttribute('data-bs-theme', currentTheme);
         updateThemeButton(currentTheme);
         
-        themeSwitcher.addEventListener('click', () => {
+        // Обработчик переключения темы
+        themeToggle.addEventListener('click', () => {
             const currentTheme = document.documentElement.getAttribute('data-theme');
             const newTheme = currentTheme === 'light' ? 'dark' : 'light';
             
+            // Применяем новую тему
             document.documentElement.setAttribute('data-theme', newTheme);
+            document.body.setAttribute('data-bs-theme', newTheme);
             localStorage.setItem('theme', newTheme);
             updateThemeButton(newTheme);
+            
+            // Обновляем Bootstrap тему
+            updateBootstrapTheme(newTheme);
         });
         
         function updateThemeButton(theme) {
-            themeSwitcher.textContent = theme === 'light' ? '🌙' : '☀️';
+            const icon = themeToggle.querySelector('i');
+            if (theme === 'light') {
+                icon.className = 'bi bi-moon-stars';
+                themeToggle.title = 'Переключить на темную тему';
+            } else {
+                icon.className = 'bi bi-sun';
+                themeToggle.title = 'Переключить на светлую тему';
+            }
         }
+        
+        function updateBootstrapTheme(theme) {
+            const productCards = document.querySelectorAll('.product-card');
+            const productTitles = document.querySelectorAll('.product-title');
+            const productDescs = document.querySelectorAll('.product-desc');
+            const productPrices = document.querySelectorAll('.product-price');
+            
+            if (theme === 'dark') {
+                // Основные цвета как на главной странице
+                document.body.classList.remove('bg-light');
+                document.body.classList.add('bg-dark-custom');
+                
+                productCards.forEach(card => {
+                    card.classList.remove('bg-light');
+                    card.classList.add('bg-dark-card');
+                });
+                
+                // Обновляем цвета текста
+                productTitles.forEach(title => {
+                    title.classList.remove('text-primary');
+                    title.classList.add('text-light');
+                });
+                
+                productDescs.forEach(desc => {
+                    desc.classList.remove('text-muted');
+                    desc.classList.add('text-light-custom');
+                });
+                
+                productPrices.forEach(price => {
+                    price.classList.remove('text-danger');
+                    price.classList.add('text-warning');
+                });
+                
+            } else {
+                // Возвращаем светлую тему
+                document.body.classList.remove('bg-dark-custom');
+                document.body.classList.add('bg-light');
+                
+                productCards.forEach(card => {
+                    card.classList.remove('bg-dark-card');
+                    card.classList.add('bg-light');
+                });
+                
+                // Восстанавливаем оригинальные цвета
+                productTitles.forEach(title => {
+                    title.classList.remove('text-light');
+                    title.classList.add('text-primary');
+                });
+                
+                productDescs.forEach(desc => {
+                    desc.classList.remove('text-light-custom');
+                    desc.classList.add('text-muted');
+                });
+                
+                productPrices.forEach(price => {
+                    price.classList.remove('text-warning');
+                    price.classList.add('text-danger');
+                });
+            }
+        }
+        
+        // Инициализация темы при загрузке
+        document.addEventListener('DOMContentLoaded', () => {
+            updateBootstrapTheme(currentTheme);
+            
+            // Обработка кнопок корзины
+            document.querySelectorAll('.product-btn').forEach(button => {
+                button.addEventListener('click', function() {
+                    const productName = this.closest('.card').querySelector('.card-title').textContent;
+                    const originalText = this.innerHTML;
+                    
+                    this.innerHTML = '<i class="bi bi-check-lg me-2"></i>Добавлено';
+                    this.classList.remove('btn-primary');
+                    this.classList.add('btn-success');
+                    
+                    setTimeout(() => {
+                        this.innerHTML = originalText;
+                        this.classList.remove('btn-success');
+                        this.classList.add('btn-primary');
+                    }, 2000);
+                    
+                    console.log(`Добавлен товар: ${productName}`);
+                });
+            });
+
+            // Анимация появления карточек
+            const cards = document.querySelectorAll('.product-card');
+            cards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.1}s`;
+                card.classList.add('fade-in');
+            });
+        });
     </script>
+
+    <style>
+        /* Цвета темной темы как на главной странице */
+        [data-theme="dark"] {
+            --color-bg: #2c3e50;
+            --color-bg-alt: #34495e;
+            --color-text: #ecf0f1;
+            --color-text-light: #bdc3c7;
+        }
+        
+        .bg-dark-custom {
+            background-color: var(--color-bg) !important;
+            color: var(--color-text) !important;
+        }
+        
+        .bg-dark-card {
+            background-color: var(--color-bg-alt) !important;
+            border-color: #2c3e50 !important;
+            color: var(--color-text) !important;
+        }
+        
+        .text-light-custom {
+            color: var(--color-text-light) !important;
+        }
+        
+        [data-theme="dark"] .text-primary {
+            color: var(--color-text) !important;
+        }
+        
+        [data-theme="dark"] .text-muted {
+            color: var(--color-text-light) !important;
+        }
+        
+        [data-theme="dark"] .card-img-top {
+            filter: brightness(0.9);
+        }
+        
+        [data-theme="dark"] .lead.text-muted {
+            color: var(--color-text-light) !important;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.6s ease forwards;
+        }
+        
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        /* Плавные переходы для темы */
+        .product-card,
+        .product-title,
+        .product-desc,
+        .product-price,
+        .lead {
+            transition: all 0.3s ease;
+        }
+    </style>
 </body>
 </html>
