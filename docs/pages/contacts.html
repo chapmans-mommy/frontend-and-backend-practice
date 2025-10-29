@@ -67,7 +67,7 @@
             </div>
             
             <div class="modal__content">
-                <form id="feedbackForm" method="dialog" class="form">
+                <form id="feedbackForm" class="form">
                     <div class="form__group">
                         <label for="name" class="form__label">Имя <span class="form__required">*</span></label>
                         <input type="text" id="name" name="name" required placeholder="Введите ваше имя" class="form__input">
@@ -105,7 +105,7 @@
                     </div>
                     
                     <div class="modal__actions">
-                        <button type="submit" class="button button--secondary">Отмена</button>
+                        <button type="button" class="button button--secondary" onclick="closeModal()">Отмена</button>
                         <button type="button" class="button button--primary" onclick="submitForm()">Отправить</button>
                     </div>
                 </form>
@@ -134,6 +134,12 @@
             themeSwitcher.textContent = theme === 'light' ? '🌙' : '☀️';
         }
 
+        // Функция для закрытия модального окна
+        function closeModal() {
+            const contactModal = document.getElementById('contactModal');
+            contactModal.close();
+        }
+
         // Функция для отправки формы
         function submitForm() {
             const form = document.getElementById('feedbackForm');
@@ -154,13 +160,13 @@
         
             console.log('Данные формы:', data);
             alert('Спасибо! Ваше обращение отправлено. Мы свяжемся с вами в ближайшее время.');
-            contactModal.close();
+            closeModal();
             form.reset();
         }
         
         document.getElementById('contactModal').addEventListener('click', function(event) {
             if (event.target === this) {
-                this.close();
+                closeModal();
             }
         });
         

@@ -700,226 +700,226 @@
     }
   }
 
-  .news {
-    padding: var(--space-lg) 0;
+.news {
+  padding: var(--space-lg) 0;
+}
+
+.news__title {
+  font-size: 2rem;
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  font-weight: 300;
+}
+
+/* Модификаторы для карточек новостей */
+.card--news {
+  text-align: left;
+  border-left: 4px solid var(--color-secondary);
+  margin-bottom: var(--space-lg);
+  transition: var(--transition-normal);
+}
+
+.card--news:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-lg);
+}
+
+.card__meta {
+  font-size: 0.875rem;
+  color: var(--color-text-light);
+  margin-bottom: var(--space-sm);
+  font-weight: 500;
+}
+
+.card__link {
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-block;
+  margin-top: var(--space-sm);
+  transition: var(--transition-normal);
+}
+
+.card__link:hover {
+  color: var(--color-secondary);
+  transform: translateX(5px);
+}
+
+/* ===== СТИЛИ ДЛЯ СТРАНИЦЫ ПРАКТИК ===== */
+
+/* Блок: practices */
+.practices {
+  padding: var(--space-lg) 0;
+}
+
+.practices__title {
+  font-size: 2rem;
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  font-weight: 300;
+}
+
+/* Модификаторы для карточек практик */
+.card--practice {
+  border-left: 4px solid var(--color-accent);
+  margin-bottom: var(--space-lg);
+}
+
+.card--practice:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+}
+
+/* ===== СТИЛИ ДЛЯ СТРАНИЦЫ КОНТАКТОВ ===== */
+
+/* Блок: contacts */
+.contacts {
+  padding: var(--space-lg) 0;
+}
+
+.contacts__title {
+  font-size: 2rem;
+  color: var(--color-text);
+  text-align: center;
+  margin-bottom: var(--space-xl);
+  font-weight: 300;
+}
+
+.contacts__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--space-md);
+  margin: var(--space-xl) 0;
+}
+
+/* Модальное окно */
+.modal {
+  border: none;
+  border-radius: var(--radius-md);
+  padding: 0;
+  box-shadow: var(--shadow-lg);
+  max-width: 500px;
+  width: 90vw;
+}
+
+.modal::backdrop {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal__header {
+  background: var(--gradient-dark);
+  color: var(--color-text-inverse);
+  padding: var(--space-lg);
+  border-radius: var(--radius-md) var(--radius-md) 0 0;
+}
+
+.modal__title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.modal__content {
+  padding: var(--space-xl);
+}
+
+.modal__actions {
+  display: flex;
+  gap: var(--space-sm);
+  justify-content: flex-end;
+  margin-top: var(--space-lg);
+}
+
+/* Формы */
+.form {
+  width: 100%;
+}
+
+.form__group {
+  margin-bottom: var(--space-lg);
+}
+
+.form__label {
+  display: block;
+  margin-bottom: var(--space-xs);
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.form__input,
+.form__select,
+.form__textarea {
+  width: 100%;
+  padding: var(--space-sm);
+  border: 2px solid var(--color-bg-alt);
+  border-radius: var(--radius-sm);
+  font-size: 1rem;
+  transition: var(--transition-normal);
+  background: var(--color-bg);
+  color: var(--color-text);
+}
+
+.form__input:focus,
+.form__select:focus,
+.form__textarea:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.form__textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form__required {
+  color: #e74c3c;
+}
+
+/* Модификаторы кнопок */
+.button--primary {
+  background: var(--gradient-primary);
+}
+
+.button--secondary {
+  background: var(--color-bg-alt);
+  color: var(--color-text);
+}
+
+.button--secondary:hover {
+  background: var(--color-text-light);
+  color: var(--color-text-inverse);
+}
+
+/* Анимации для модального окна */
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(-20px);
   }
-  
-  .news__title {
-    font-size: 2rem;
-    color: var(--color-text);
-    text-align: center;
-    margin-bottom: var(--space-xl);
-    font-weight: 300;
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
   }
-  
-  /* Модификаторы для карточек новостей */
-  .card--news {
-    text-align: left;
-    border-left: 4px solid var(--color-secondary);
-    margin-bottom: var(--space-lg);
-    transition: var(--transition-normal);
-  }
-  
-  .card--news:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-lg);
-  }
-  
-  .card__meta {
-    font-size: 0.875rem;
-    color: var(--color-text-light);
-    margin-bottom: var(--space-sm);
-    font-weight: 500;
-  }
-  
-  .card__link {
-    color: var(--color-primary);
-    text-decoration: none;
-    font-weight: 600;
-    display: inline-block;
-    margin-top: var(--space-sm);
-    transition: var(--transition-normal);
-  }
-  
-  .card__link:hover {
-    color: var(--color-secondary);
-    transform: translateX(5px);
-  }
-  
-  /* ===== СТИЛИ ДЛЯ СТРАНИЦЫ ПРАКТИК ===== */
-  
-  /* Блок: practices */
-  .practices {
-    padding: var(--space-lg) 0;
-  }
-  
-  .practices__title {
-    font-size: 2rem;
-    color: var(--color-text);
-    text-align: center;
-    margin-bottom: var(--space-xl);
-    font-weight: 300;
-  }
-  
-  /* Модификаторы для карточек практик */
-  .card--practice {
-    border-left: 4px solid var(--color-accent);
-    margin-bottom: var(--space-lg);
-  }
-  
-  .card--practice:hover {
-    transform: translateY(-3px);
-    box-shadow: var(--shadow-md);
-  }
-  
-  /* ===== СТИЛИ ДЛЯ СТРАНИЦЫ КОНТАКТОВ ===== */
-  
-  /* Блок: contacts */
-  .contacts {
-    padding: var(--space-lg) 0;
-  }
-  
-  .contacts__title {
-    font-size: 2rem;
-    color: var(--color-text);
-    text-align: center;
-    margin-bottom: var(--space-xl);
-    font-weight: 300;
-  }
-  
+}
+
+.modal {
+  animation: modalFadeIn 0.3s ease;
+}
+
+/* Адаптивность для новостей и практик */
+@media (max-width: 768px) {
   .contacts__grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: var(--space-md);
-    margin: var(--space-xl) 0;
-  }
-  
-  /* Модальное окно */
-  .modal {
-    border: none;
-    border-radius: var(--radius-md);
-    padding: 0;
-    box-shadow: var(--shadow-lg);
-    max-width: 500px;
-    width: 90vw;
-  }
-  
-  .modal::backdrop {
-    background: rgba(0, 0, 0, 0.6);
-  }
-  
-  .modal__header {
-    background: var(--gradient-dark);
-    color: var(--color-text-inverse);
-    padding: var(--space-lg);
-    border-radius: var(--radius-md) var(--radius-md) 0 0;
-  }
-  
-  .modal__title {
-    margin: 0;
-    font-size: 1.5rem;
-    font-weight: 300;
-  }
-  
-  .modal__content {
-    padding: var(--space-xl);
+    grid-template-columns: 1fr;
   }
   
   .modal__actions {
-    display: flex;
-    gap: var(--space-sm);
-    justify-content: flex-end;
-    margin-top: var(--space-lg);
+    flex-direction: column;
   }
   
-  /* Формы */
-  .form {
+  .button {
     width: 100%;
   }
-  
-  .form__group {
-    margin-bottom: var(--space-lg);
-  }
-  
-  .form__label {
-    display: block;
-    margin-bottom: var(--space-xs);
-    font-weight: 600;
-    color: var(--color-text);
-  }
-  
-  .form__input,
-  .form__select,
-  .form__textarea {
-    width: 100%;
-    padding: var(--space-sm);
-    border: 2px solid var(--color-bg-alt);
-    border-radius: var(--radius-sm);
-    font-size: 1rem;
-    transition: var(--transition-normal);
-    background: var(--color-bg);
-    color: var(--color-text);
-  }
-  
-  .form__input:focus,
-  .form__select:focus,
-  .form__textarea:focus {
-    outline: none;
-    border-color: var(--color-primary);
-    box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
-  }
-  
-  .form__textarea {
-    min-height: 120px;
-    resize: vertical;
-  }
-  
-  .form__required {
-    color: #e74c3c;
-  }
-  
-  /* Модификаторы кнопок */
-  .button--primary {
-    background: var(--gradient-primary);
-  }
-  
-  .button--secondary {
-    background: var(--color-bg-alt);
-    color: var(--color-text);
-  }
-  
-  .button--secondary:hover {
-    background: var(--color-text-light);
-    color: var(--color-text-inverse);
-  }
-  
-  /* Анимации для модального окна */
-  @keyframes modalFadeIn {
-    from {
-      opacity: 0;
-      transform: scale(0.9) translateY(-20px);
-    }
-    to {
-      opacity: 1;
-      transform: scale(1) translateY(0);
-    }
-  }
-  
-  .modal {
-    animation: modalFadeIn 0.3s ease;
-  }
-  
-  /* Адаптивность для новостей и практик */
-  @media (max-width: 768px) {
-    .contacts__grid {
-      grid-template-columns: 1fr;
-    }
-    
-    .modal__actions {
-      flex-direction: column;
-    }
-    
-    .button {
-      width: 100%;
-    }
-  }
+}
